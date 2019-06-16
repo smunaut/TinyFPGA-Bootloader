@@ -22,18 +22,18 @@ PKG = sg48
 
 all: $(PROJ).rpt multiboot.bin
 
-%.blif: %.v ../../common/*.v 
-	yosys -p 'synth_ice40 -top $(PROJ) -blif $@' $^
+%.json: %.v ../../common/*.v
+	yosys -p 'synth_ice40 -top $(PROJ) -json $@' $^
 
-%.asc: $(PIN_DEF) %.blif
-	arachne-pnr -d 5k -P $(PKG) -o $@ -p $^
+%.asc: $(PIN_DEF) %.json
+	nextpnr-ice40 --up5k --package sg48 --pcf $(PIN_DEF) --asc $@ --json bootloader.json --freq 48 --placer heap --timing-allow-fail
 
 %.bin: %.asc
 	icepack $< $@
 
 multiboot.bin: bootloader.bin
-	cp bootloader.bin bootloader_0.bin 
-	cp bootloader.bin bootloader_1.bin 
+	cp bootloader.bin bootloader_0.bin
+	cp bootloader.bin bootloader_1.bin
 	icemulti -v -o multiboot.bin -a16 -p0 bootloader_0.bin bootloader_1.bin
 
 %.rpt: %.asc
