@@ -7,57 +7,148 @@ Info: max_span_hack is enabled: estimate is conservative.
 Report for critical path:
 -------------------------
 
-        loop-start at net_54876
-        t3211 (LocalMux) I -> O: 1.099 ns
-        inmux_14_18_58755_58806 (InMux) I -> O: 0.662 ns
-        lc40_14_18_5 (LogicCell40) in1 -> lcout: 1.232 ns
-1000002.993 ns net_54876 (tinyfpga_bootloader_inst.ctrl_ep_inst.out_ep_acked)
-        odrv_14_18_54876_58489 (Odrv4) I -> O: 0.649 ns
-        t3216 (LocalMux) I -> O: 1.099 ns
-        inmux_15_16_62345_62398 (InMux) I -> O: 0.662 ns
-        lc40_15_16_6 (LogicCell40) in3 -> lcout: 0.874 ns
-1000006.278 ns net_58461 ($abc$26083$n1354)
-        t3442 (LocalMux) I -> O: 1.099 ns
-        inmux_15_16_62356_62379 (InMux) I -> O: 0.662 ns
-        t586 (CascadeMux) I -> O: 0.000 ns
-        lc40_15_16_3 (LogicCell40) in2 -> lcout: 1.205 ns
-1000009.245 ns net_58458 ($abc$26083$n1353)
-        t3440 (LocalMux) I -> O: 1.099 ns
-        inmux_15_16_62329_62391 (InMux) I -> O: 0.662 ns
-        t588 (CascadeMux) I -> O: 0.000 ns
-        lc40_15_16_5 (LogicCell40) in2 -> lcout: 1.205 ns
-1000012.211 ns net_58460 (tinyfpga_bootloader_inst.ctrl_ep_inst.status_stage_end$2)
-        odrv_15_16_58460_58608 (Odrv4) I -> O: 0.649 ns
-        t3456 (Span4Mux_v4) I -> O: 0.649 ns
-        t3455 (Span4Mux_v4) I -> O: 0.649 ns
-        t3454 (Span4Mux_h4) I -> O: 0.543 ns
-        t3453 (Span4Mux_v4) I -> O: 0.649 ns
-        t3452 (LocalMux) I -> O: 1.099 ns
-        t3451 (IoInMux) I -> O: 0.662 ns
-        t3450 (ICE_GB) USERSIGNALTOGLOBALBUFFER -> GLOBALBUFFEROUTPUT: 1.589 ns
-        t3449 (gio2CtrlBuf) I -> O: 0.000 ns
-        t3448 (GlobalMux) I -> O: 0.278 ns
-        t3447 (INTERCONN) I -> O: 0.000 ns
-        t3446 (LocalMux) I -> O: 1.099 ns
-        inmux_3_10_16253_16325 (InMux) I -> O: 0.662 ns
-        lc40_3_10_7 (LogicCell40) in1 -> lcout: 1.232 ns
-1000021.973 ns net_12384 ($abc$26083$n1770)
-        odrv_3_10_12384_8204 (Odrv4) I -> O: 0.649 ns
-        t1172 (LocalMux) I -> O: 1.099 ns
-        inmux_4_10_20107_20159 (CEMux) I -> O: 0.702 ns
-1000024.423 ns net_20159 ($abc$26083$n1770)
-        lc40_4_10_7 (LogicCell40) ce [setup]: 0.000 ns
-1000024.423 ns net_16215 (tinyfpga_bootloader_inst.ctrl_ep_inst.dev_addr_i[1])
+        lc40_12_9_7 (LogicCell40) [clk] -> lcout: 1.491 ns
+     1.491 ns net_46109 (tinyfpga_bootloader_inst.usb_fs_pe_inst.usb_fs_out_pe_inst.ep_put_addr[0][1])
+        t4007 (LocalMux) I -> O: 1.099 ns
+        inmux_12_8_49858_49885 (InMux) I -> O: 0.662 ns
+        lc40_12_8_0 (LogicCell40) in1 -> carryout: 0.675 ns
+     3.928 ns t764
+        lc40_12_8_1 (LogicCell40) carryin -> carryout: 0.278 ns
+     4.206 ns net_49889 ($auto$alumacc.cc:474:replace_alu$4449.C[3])
+        lc40_12_8_2 (LogicCell40) carryin -> carryout: 0.278 ns
+     4.484 ns net_49895 ($auto$alumacc.cc:474:replace_alu$4449.C[4])
+        lc40_12_8_3 (LogicCell40) carryin -> carryout: 0.278 ns
+     4.762 ns net_49901 ($auto$alumacc.cc:474:replace_alu$4449.C[5])
+        lc40_12_8_4 (LogicCell40) carryin -> carryout: 0.278 ns
+     5.040 ns net_49907 ($nextpnr_ICESTORM_LC_1$I3)
+        inmux_12_8_49907_49917 (InMux) I -> O: 0.662 ns
+        lc40_12_8_5 (LogicCell40) in3 -> lcout: 0.874 ns
+     6.577 ns net_45984 ($auto$alumacc.cc:474:replace_alu$4449.C[10])
+        t3984 (LocalMux) I -> O: 1.099 ns
+        inmux_12_9_49987_50014 (InMux) I -> O: 0.662 ns
+        lc40_12_9_1 (LogicCell40) in1 -> lcout: 1.232 ns
+     9.570 ns net_46103 ($auto$alumacc.cc:474:replace_alu$4347.B_buf[6])
+        t3999 (LocalMux) I -> O: 1.099 ns
+        inmux_12_9_49999_50019 (InMux) I -> O: 0.662 ns
+        lc40_12_9_2 (LogicCell40) in0 -> lcout: 1.285 ns
+    12.616 ns net_46104 ($abc$20030$auto$alumacc.cc:474:replace_alu$4347.BB[6])
+        t4000 (LocalMux) I -> O: 1.099 ns
+        inmux_11_8_46046_46090 (InMux) I -> O: 0.662 ns
+        lc40_11_8_6 (LogicCell40) in1 -> carryout: 0.675 ns
+    15.053 ns t700
+        lc40_11_8_7 (LogicCell40) carryin -> carryout: 0.278 ns
+    15.331 ns net_46094 ($auto$alumacc.cc:474:replace_alu$4347.C[8])
+        t701 (ICE_CARRY_IN_MUX) carryinitin -> carryinitout: 0.556 ns
+        lc40_11_9_0 (LogicCell40) carryin -> carryout: 0.278 ns
+    16.166 ns t702
+        lc40_11_9_1 (LogicCell40) carryin -> carryout: 0.278 ns
+    16.444 ns t703
+        lc40_11_9_2 (LogicCell40) carryin -> carryout: 0.278 ns
+    16.722 ns t704
+        lc40_11_9_3 (LogicCell40) carryin -> carryout: 0.278 ns
+    17.000 ns t705
+        lc40_11_9_4 (LogicCell40) carryin -> carryout: 0.278 ns
+    17.278 ns t706
+        lc40_11_9_5 (LogicCell40) carryin -> carryout: 0.278 ns
+    17.556 ns t707
+        lc40_11_9_6 (LogicCell40) carryin -> carryout: 0.278 ns
+    17.834 ns t708
+        lc40_11_9_7 (LogicCell40) carryin -> carryout: 0.278 ns
+    18.113 ns net_46217 ($auto$alumacc.cc:474:replace_alu$4347.C[16])
+        t709 (ICE_CARRY_IN_MUX) carryinitin -> carryinitout: 0.556 ns
+        lc40_11_10_0 (LogicCell40) carryin -> carryout: 0.278 ns
+    18.947 ns t710
+        lc40_11_10_1 (LogicCell40) carryin -> carryout: 0.278 ns
+    19.225 ns t711
+        lc40_11_10_2 (LogicCell40) carryin -> carryout: 0.278 ns
+    19.503 ns t712
+        lc40_11_10_3 (LogicCell40) carryin -> carryout: 0.278 ns
+    19.781 ns t713
+        lc40_11_10_4 (LogicCell40) carryin -> carryout: 0.278 ns
+    20.059 ns t714
+        lc40_11_10_5 (LogicCell40) carryin -> carryout: 0.278 ns
+    20.338 ns t715
+        lc40_11_10_6 (LogicCell40) carryin -> carryout: 0.278 ns
+    20.616 ns t716
+        lc40_11_10_7 (LogicCell40) carryin -> carryout: 0.278 ns
+    20.894 ns net_46340 ($auto$alumacc.cc:474:replace_alu$4347.C[24])
+        t717 (ICE_CARRY_IN_MUX) carryinitin -> carryinitout: 0.556 ns
+        lc40_11_11_0 (LogicCell40) carryin -> carryout: 0.278 ns
+    21.728 ns t718
+        lc40_11_11_1 (LogicCell40) carryin -> carryout: 0.278 ns
+    22.006 ns t719
+        lc40_11_11_2 (LogicCell40) carryin -> carryout: 0.278 ns
+    22.285 ns t720
+        lc40_11_11_3 (LogicCell40) carryin -> carryout: 0.278 ns
+    22.563 ns t721
+        lc40_11_11_4 (LogicCell40) carryin -> carryout: 0.278 ns
+    22.841 ns t722
+        lc40_11_11_5 (LogicCell40) carryin -> carryout: 0.278 ns
+    23.119 ns t723
+        lc40_11_11_6 (LogicCell40) carryin -> carryout: 0.278 ns
+    23.397 ns t724
+        lc40_11_11_7 (LogicCell40) carryin -> carryout: 0.278 ns
+    23.675 ns net_46463 ($nextpnr_ICESTORM_LC_24$I3)
+        t725 (ICE_CARRY_IN_MUX) carryinitin -> carryinitout: 0.556 ns
+        inmux_11_12_46507_46548 (InMux) I -> O: 0.662 ns
+        lc40_11_12_0 (LogicCell40) in3 -> lcout: 0.874 ns
+    25.768 ns net_42640 ($abc$20030$auto$alumacc.cc:491:replace_alu$4349[31])
+        t3836 (LocalMux) I -> O: 1.099 ns
+        inmux_10_11_42574_42610 (InMux) I -> O: 0.662 ns
+        lc40_10_11_3 (LogicCell40) in1 -> lcout: 1.232 ns
+    28.761 ns net_38689 (tinyfpga_bootloader_inst.ctrl_out_ep_data_avail)
+        odrv_10_11_38689_38471 (Odrv4) I -> O: 0.649 ns
+        t3620 (Span4Mux_v4) I -> O: 0.649 ns
+        t3619 (Span4Mux_h4) I -> O: 0.543 ns
+        t3618 (LocalMux) I -> O: 1.099 ns
+        inmux_10_3_41576_41643 (InMux) I -> O: 0.662 ns
+        lc40_10_3_6 (LogicCell40) in0 -> lcout: 1.285 ns
+    33.648 ns net_37708 (tinyfpga_bootloader_inst.usb_spi_bridge_ep_inst.out_data_ready)
+        t3455 (LocalMux) I -> O: 1.099 ns
+        inmux_11_2_45304_45315 (InMux) I -> O: 0.662 ns
+        lc40_11_2_0 (LogicCell40) in0 -> lcout: 1.285 ns
+    36.695 ns net_41374 ($abc$20030$new_n1204_)
+        t3720 (LocalMux) I -> O: 1.099 ns
+        inmux_11_3_45405_45445 (InMux) I -> O: 0.662 ns
+        lc40_11_3_1 (LogicCell40) in1 -> lcout: 1.232 ns
+    39.688 ns net_41534 (tinyfpga_bootloader_inst.serial_out_ep_data_get)
+        odrv_11_3_41534_41435 (Odrv4) I -> O: 0.649 ns
+        t3761 (Span4Mux_h4) I -> O: 0.543 ns
+        t3760 (LocalMux) I -> O: 1.099 ns
+        inmux_8_4_34040_34112 (InMux) I -> O: 0.662 ns
+        t503 (CascadeMux) I -> O: 0.000 ns
+        lc40_8_4_7 (LogicCell40) in2 -> lcout: 1.205 ns
+    43.847 ns net_30170 ($abc$20030$auto$dff2dffe.cc:175:make_patterns_logic$15835)
+        odrv_8_4_30170_30303 (Odrv4) I -> O: 0.649 ns
+        t3025 (Span4Mux_h4) I -> O: 0.543 ns
+        t3024 (Span4Mux_h4) I -> O: 0.543 ns
+        t3023 (LocalMux) I -> O: 1.099 ns
+        inmux_8_4_34046_34114 (CEMux) I -> O: 0.702 ns
+    47.383 ns net_34114 ($abc$20030$auto$dff2dffe.cc:175:make_patterns_logic$15835)
+        lc40_8_4_5 (LogicCell40) ce [setup]: 0.000 ns
+    47.383 ns net_30168 (tinyfpga_bootloader_inst.usb_fs_pe_inst.usb_fs_out_pe_inst.ep_get_addr[1][1])
 
 Resolvable net names on path:
-1000002.993 ns ..1000005.404 ns tinyfpga_bootloader_inst.ctrl_ep_inst.out_ep_acked
-1000006.278 ns ..1000008.039 ns $abc$26083$n1354
-1000009.245 ns ..1000011.006 ns $abc$26083$n1353
-1000012.211 ns ..1000012.211 ns tinyfpga_bootloader_inst.ctrl_ep_inst.status_stage_end
-1000020.741 ns ..1000020.741 ns tinyfpga_bootloader_inst.ctrl_ep_inst.status_stage_end$2
-1000021.973 ns ..1000024.423 ns $abc$26083$n1770
-                  lcout -> tinyfpga_bootloader_inst.ctrl_ep_inst.dev_addr_i[1]
+     1.491 ns ..  3.252 ns tinyfpga_bootloader_inst.usb_fs_pe_inst.usb_fs_out_pe_inst.ep_put_addr[0][1]
+     4.206 ns ..  4.206 ns $auto$alumacc.cc:474:replace_alu$4449.C[3]
+     4.484 ns ..  4.484 ns $auto$alumacc.cc:474:replace_alu$4449.C[4]
+     4.762 ns ..  4.762 ns $auto$alumacc.cc:474:replace_alu$4449.C[5]
+     5.040 ns ..  5.702 ns $nextpnr_ICESTORM_LC_1$I3
+     6.577 ns ..  8.338 ns $auto$alumacc.cc:474:replace_alu$4449.C[10]
+     9.570 ns .. 11.331 ns $auto$alumacc.cc:474:replace_alu$4347.B_buf[6]
+    12.616 ns .. 14.378 ns $abc$20030$auto$alumacc.cc:474:replace_alu$4347.BB[6]
+    15.331 ns .. 15.887 ns $auto$alumacc.cc:474:replace_alu$4347.C[8]
+    18.113 ns .. 18.669 ns $auto$alumacc.cc:474:replace_alu$4347.C[16]
+    20.894 ns .. 21.450 ns $auto$alumacc.cc:474:replace_alu$4347.C[24]
+    23.675 ns .. 24.894 ns $nextpnr_ICESTORM_LC_24$I3
+    25.768 ns .. 27.529 ns $abc$20030$auto$alumacc.cc:491:replace_alu$4349[31]
+    28.761 ns .. 32.364 ns tinyfpga_bootloader_inst.ctrl_out_ep_data_avail
+    33.648 ns .. 35.410 ns tinyfpga_bootloader_inst.usb_spi_bridge_ep_inst.out_data_ready
+    36.695 ns .. 38.456 ns $abc$20030$new_n1204_
+    39.688 ns .. 42.641 ns tinyfpga_bootloader_inst.serial_out_ep_data_get
+    43.847 ns .. 47.383 ns $abc$20030$auto$dff2dffe.cc:175:make_patterns_logic$15835
+                  lcout -> tinyfpga_bootloader_inst.usb_fs_pe_inst.usb_fs_out_pe_inst.ep_get_addr[1][1]
 
-Total number of logic levels: 6
-Total path delay: 1000024.42 ns (0.00 MHz)
+Total number of logic levels: 41
+Total path delay: 47.38 ns (21.10 MHz)
 
